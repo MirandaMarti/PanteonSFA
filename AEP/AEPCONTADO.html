@@ -36,21 +36,26 @@
 		<form action="/action_page.php">
 			<div class="form-group">
 				<label for="nc">Numero Catasatral</label>
-				<input type="text" class="form-control" id="NC" placeholder="la clave catastral" name="NC">
+				<input type="text" class="form-control" id="NC" placeholder="la clave catastral" name="NC" >
 			</div>
 			<div class="form-group">
 				<label for="nom">Nombre:</label>
-				<input type="text" class="form-control" id="nombre" placeholder="Nombre" name="Nombre">
+				<input type="text" class="form-control" id="nombre" placeholder="Nombre" name="Nombre" required>
 			</div>
 
 			<div class="form-group">
 				<label for="dir">Direccion:</label>
-				<input type="text" class="form-control" id="direccion" placeholder="Direccion" name="Direccion">
+				<input type="text" class="form-control" id="direccion" placeholder="Direccion" name="Direccion" required>
 			</div>
 
 			<div class="form-group">
 				<label for="tel">Telefono:</label>
-				<input type="tel" class="form-control" id="telefono" placeholder="Telefono" name="Telefono">
+				<input type="tel" class="form-control" id="telefono" placeholder="Telefono" name="Telefono" required>
+			</div>
+
+			<div class="form-group">
+				<label for="corr">Correo:</label>
+				<input type="email" class="form-control" id="correoAEP" placeholder="Correo" name="correoAEP" required>
 			</div>
 
 			<button type="submit" class="btn btn-primary">Guardar</button>
