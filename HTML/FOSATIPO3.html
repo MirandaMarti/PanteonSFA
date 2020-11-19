@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contado</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<!-- plugins de js -->
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<!-- plugins de fa -->
+
+	<script src="https://kit.fontawesome.com/e632f1f723.js" crossorigin="anonymus"></script>
+</head>
+<body>
+
+	<div class="container-fluid">
+
+		<h3 class="text-center py-3">Pago</h3>
+
+	</div>
+
+
+	<div class="container">
+		<h2>Ingresa Datos</h2>
+		<form action="/action_page.php">
+			<div class="form-group">
+				<label for="nc">Numero Catasatral</label>
+				<input type="text" class="form-control" id="NC" placeholder="la clave catastral" name="NC" >
+			</div>
+			<div class="form-group">
+				<label for="nom">Nombre:</label>
+				<input type="text" class="form-control" id="nombreFosa3" placeholder="Nombre" name="nombreFosa3" required>
+			</div>
+
+			<div class="form-group">
+				<label for="dir">Direccion:</label>
+				<input type="text" class="form-control" id="direccionFosa3" placeholder="Direccion" name="direccionFosa3" required>
+			</div>
+
+			<div class="form-group">
+				<label for="tel">Telefono:</label>
+				<input type="tel" class="form-control" id="telefonoFosa3" placeholder="Telefono" name="telefonoFosa3" required>
+			</div>
+
+			<div class="form-group">
+				<label for="corr">Correo:</label>
+				<input type="email" class="form-control" id="correoFosa3" placeholder="Correo" name="correoFosa3" required>
+			</div>
+
+			<div class="d-flex py-5 p-5">
+				<div class="form-group p-5">
+					<input type="checkbox" class="form-control" id="INEPRropietarioA3" name="INEPRropietarioA3" required>
+					<label for="INE">Copia del INE</label>
+				</div>
+
+				<div class="form-group p-5">
+					<input type="checkbox" class="form-control" id="ComprobanteDomPropietarioA3" name="ComprobanteDomPropietarioA3" required>
+					<label for="ComprobanteDom">Copia del comprobante de dommicilio</label>
+				</div>
+
+			</div>
+
+			<button type="submit" class="btn btn-primary">Guardar</button>
+
+		<a href="AEP.html" class="btn btn-primary" role="button">Regresar</a>
+			</form>
+	</div>
+
+
+
+</body>
+</html> 
+
+	<!-- plugins -->
