@@ -1,6 +1,6 @@
 <?php 
 
-require_once "C:/xampp/htdocs/PanteonSFA2/controladores/plantilla.controlador.php";
+require_once "C:/xampp/htdocs/PanteonSFAcontroladores//plantilla.controlador.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrTraerPlantilla();

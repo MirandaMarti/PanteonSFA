@@ -8,7 +8,7 @@ class ControladorPlantilla{
 
 	public function ctrTraerPlantilla(){
 
-		include "C:/xampp/htdocs/PanteonSFA2/vistas/plantilla.php";
+		include "C:/xampp/htdocs/PanteonSFA/vistas/plantilla.php";
 
 	}
 
