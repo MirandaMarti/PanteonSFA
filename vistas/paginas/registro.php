@@ -1,6 +1,7 @@
 <?php 
 
 require_once "C:/xampp/htdocs/PanteonSFA/controladores/plantilla.controlador.php";
+require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrTraerPlantilla();
@@ -18,7 +19,7 @@ $plantilla -> ctrTraerPlantilla();
 
 			<br>
 			
-			<label for="nombre">Nombre:</label>
+			<label for="nombre">Nombre completo:</label>
 
 			<div class="input-group">
 				
@@ -57,6 +58,14 @@ $plantilla -> ctrTraerPlantilla();
 
 			
 		</div>
+
+
+		<?php 
+
+		$registro = new ControladorFormularios();
+		$registro -> ctrRegistro();
+
+		?>
 
 		
 		<button type="submit" class="btn btn-primary">Enviar</button>
