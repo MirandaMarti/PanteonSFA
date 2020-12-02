@@ -64,6 +64,10 @@ $plantilla -> ctrTraerPlantilla();
 				header('Location: '.$_GET["pagina"].'.php');
 
 
+			}else{
+
+				header('Location: error404.php');
+
 			}
 
 		}

@@ -8,7 +8,7 @@ $plantilla -> ctrTraerPlantilla();
 
  ?>
 
-<div class="d-flex justify-content-center text-center">
+<div class="d-flex justify-content-center text-center py-5">
 	
 	<form class="p-5 bg-light" method="post">
 		
