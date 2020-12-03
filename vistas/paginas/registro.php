@@ -62,8 +62,15 @@ $plantilla -> ctrTraerPlantilla();
 
 		<?php 
 
-		$registro = new ControladorFormularios();
-		$registro -> ctrRegistro();
+		//$registro = new ControladorFormularios();
+		//$registro -> ctrRegistro(); instancia de un metodo no estatico 
+
+		//instancia de un metodo estatico 
+		$registro = ControladorFormularios::ctrRegistro();
+		if($registro == "ok"){
+
+			echo '<div class = "alert alert-succes">El administrador ha sido registrado </div>';
+		}
 
 		?>
 
