@@ -69,7 +69,7 @@ $plantilla -> ctrTraerPlantilla();
 		$registro = ControladorFormularios::ctrRegistro();
 		if($registro == "ok"){
 
-			echo '<div class = "alert alert-succes">El administrador ha sido registrado </div>';
+			echo '<div class="alert alert-success">El administrador ha sido registrado </div>';
 		}
 
 		?>
