@@ -2,6 +2,7 @@
 
 require_once "C:/xampp/htdocs/PanteonSFA/controladores/plantilla.controlador.php";
 
+
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrTraerPlantilla();
 
@@ -33,6 +34,11 @@ $plantilla -> ctrTraerPlantilla();
 		<div class="form-group">
 			<label for="corr">Correo:</label>
 			<input type="email" class="form-control" id="correoAEP" placeholder="Correo" name="correoAEP" required>
+		</div>
+
+		<div class="form-group">
+			<label for="corr">Tipo de adquisición:</label>
+			<input type="text" class="form-control" id="adquisiciónAEP" placeholder="<?php ?>" name="correoAEP" required>
 		</div>
 
 

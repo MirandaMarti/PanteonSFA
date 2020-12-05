@@ -14,7 +14,7 @@ $plantilla -> ctrTraerPlantilla();
 
 	<li class="nav item">
 
-		<a class="nav-link" href="aep.php?pagina=opcionpago"> Cripta tipo 3 </a>
+		<a class="nav-link" href="aep.php?pagina=opcionpago?tipo=cripta"> Cripta tipo 3 </a>
 
 	</li>
 	<li class="nav item">
@@ -42,6 +42,7 @@ $plantilla -> ctrTraerPlantilla();
 </ul>
 
 <?php 
+
 
 	if(isset($_GET["pagina"])){
 
