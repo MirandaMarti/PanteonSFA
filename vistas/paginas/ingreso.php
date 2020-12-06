@@ -1,3 +1,9 @@
+<?php 
+
+	require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
+
+ ?>
+
 
 <h3 class="text-center py-3"> Panteón san Fransisco de asis </h3>
 
@@ -38,18 +44,22 @@
 			
 		</div>
 
+		<?php 
+
+		$ingreso = new ControladorFormularios();
+
+		$ingreso -> ctrIngreso();
+
+		 ?>
+
+		
+
 		
 		<button type="submit" class="btn btn-primary">Ingresar</button>
 
 		<br><br>
 
 		<a href="vistas/paginas/registro.php">Registrate</a>
-
-		<br><br>
-
-		<a href="vistas/paginas/menu.php">Ir al menú</a>
-
-		
 
 
 	</form>
