@@ -1,5 +1,7 @@
 <?php 
 
+require_once "C:/xampp/htdocs/PanteonSFA/modelos/formularios.modelo.php";
+
 class ControladorFormularios{
 
 	/*=============================================
@@ -10,7 +12,16 @@ class ControladorFormularios{
 
 		if(isset($_POST["registroNombre"])){
 
-			return "ok";
+			$tabla = "administradores";
+
+			$datos = array("nombre" => $_POST["registroNombre"],
+							"email" => $_POST["registroEmail"],
+							"password" => $_POST["registroPassword"]);
+
+
+			$respuesta = ModeloFormularios::mdlRegistro($tabla, $datos);
+
+			return $respuesta;
 
 		}
 
