@@ -43,19 +43,26 @@ class ControladorFormularios{
 
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
+
 			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"]){
 
-				echo '<script>
+				if($_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
 
-				if(window.history.replaceState){
+					echo '<script>
 
-					window.history.replaceState(null , null, window.location.href);
+					if(window.history.replaceState){
+
+						window.history.replaceState(null , null, window.location.href);
+
+					}
+
+					window.location = "vistas/paginas/menu.php";
+
+					</script>';
 
 				}
 
-				window.location = "vistas/paginas/menu.php";
-
-				</script>';
+				
 
 			}else{
 
