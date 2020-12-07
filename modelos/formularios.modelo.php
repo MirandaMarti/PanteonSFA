@@ -38,17 +38,8 @@ class ModeloFormularios{
 
 	static public function mdlSeleccionarRegistros($tabla, $item, $valor){
 
-		if($item == null && $valor == null){
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
-
-			$stmt -> execute();
-
-			return $stmt -> fetchAll();
-
-		}else{
-
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+			$stmt = Conexion::conectar()->prepare("SELECT email, password FROM $tabla WHERE $item = :$item");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
@@ -56,15 +47,13 @@ class ModeloFormularios{
 
 			return $stmt -> fetch();
 
-		}
+			$stmt -> close();
 
-		
-
-		$stmt -> close();
-
-		$stmt = null;
+			$stmt = null;
 
 	}
+
+	
 
 
 }

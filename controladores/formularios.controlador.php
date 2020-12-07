@@ -41,45 +41,44 @@ class ControladorFormularios{
 
 			$valor = $_POST["ingresoEmail"];
 
+
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
-
 			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"]){
-
-				if($_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
-
-					echo '<script>
-
-					if(window.history.replaceState){
-
-						window.history.replaceState(null , null, window.location.href);
-
-					}
-
-					window.location = "vistas/paginas/menu.php";
-
-					</script>';
-
-				}
-
 				
+				echo '<script>
+			
+			if(window.history.replaceState){
+				
+				window.history.replaceState(null , null, window.location.href);
+
+			}
+			
+			window.location = "vistas/paginas/menu.php";
+
+			</script>';
 
 			}else{
 
-				echo '<script>
 
-				if(window.history.replaceState){
-
-					window.history.replaceState(null , null, window.location.href);
-
-				}
-
-
-				</script>';
-
-				echo '<div class="alert alert-danger"> Error al ingresar al sistema </div>';
+			echo '<script>
+			
+			if(window.history.replaceState){
+				
+				window.history.replaceState(null , null, window.location.href);
 
 			}
+			
+
+			</script>';
+
+			echo '<div class="alert alert-danger">Error al iniciar sesión</div>';
+
+			}
+
+			echo '<pre>'; print_r($respuesta); echo '</pre>';
+
+			//var_dump($respuesta);
 
 			
 
