@@ -44,6 +44,7 @@ class ControladorFormularios{
 
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
+			
 			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"]){
 				
 				echo '<script>
@@ -75,8 +76,9 @@ class ControladorFormularios{
 			echo '<div class="alert alert-danger">Error al iniciar sesión</div>';
 
 			}
+		
 
-			echo '<pre>'; print_r($respuesta); echo '</pre>';
+			//echo '<pre>'; print_r($respuesta); echo '</pre>';
 
 			//var_dump($respuesta);
 
