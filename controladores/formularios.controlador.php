@@ -45,7 +45,7 @@ class ControladorFormularios{
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
 			
-			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"]){
+			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
 				
 				echo '<script>
 			
@@ -78,7 +78,7 @@ class ControladorFormularios{
 			}
 		
 
-			//echo '<pre>'; print_r($respuesta); echo '</pre>';
+			echo '<pre>'; print_r($respuesta); echo '</pre>';
 
 			//var_dump($respuesta);
 
