@@ -11,21 +11,27 @@ $plantilla -> ctrTraerPlantilla();
 	<h2>Ingresa Datos</h2>
 	<form action="/action_page.php">
 		<div class="form-group">
-			<label for="nc">Numero Catasatral</label>
-			<input type="text" class="form-control" id="NC" placeholder="la clave catastral" name="NC">
+			<label for="nc">Número catastral:</label>
+			<input type="text" class="form-control" id="NC" placeholder="Clave catastral" name="NC">
 		</div>
+
+		<div class="form-group">
+			<label for="nc">Tipo de operación:</label>
+			<input type="text" class="form-control" id="NC" placeholder="Operación" name="NC">
+		</div>
+
 		<div class="form-group">
 			<label for="nom">Nombre:</label>
 			<input type="text" class="form-control" id="nombreParcialAEP" placeholder="Nombre" name="nombreParcialAEP" required>
 		</div>
 
 		<div class="form-group">
-			<label for="dir">Direccion:</label>
+			<label for="dir">Dirección:</label>
 			<input type="text" class="form-control" id="direccionParcialAEP" placeholder="Direccion" name="direccionParcialAEP" required>
 		</div>
 
 		<div class="form-group">
-			<label for="tel">Telefono:</label>
+			<label for="tel">Teléfono:</label>
 			<input type="tel" class="form-control" id="telefonoPArcialAEP" placeholder="Telefono" name="telefonoPArcialAEP" required>
 		</div>
 
@@ -34,26 +40,26 @@ $plantilla -> ctrTraerPlantilla();
 			<input type="email" class="form-control" id="correoAEP" placeholder="Correo" name="correoAEP" required>
 		</div>
 
-		<h2>Ingresa Datos del Aval</h2>
+		<h2>Ingresa datos del aval</h2>
 
 		<div class="form-group">
-			<label for="nom">Nombre:</label>
+			<label for="nom">Nombre del aval:</label>
 			<input type="text" class="form-control" id="nombreAvalAEP" placeholder="Nombre" name="nombreAvalAEP" required>
 		</div>
 
 		<div class="form-group">
-			<label for="dir">Direccion:</label>
+			<label for="dir">Direccion del aval:</label>
 			<input type="text" class="form-control" id="direccionAvalAEP" placeholder="Direccion" name="direccionAvalAEP" required>
 		</div>
 
 		<div class="form-group">
-			<label for="tel">Telefono:</label>
+			<label for="tel">Telefono del aval:</label>
 			<input type="tel" class="form-control" id="telefonoAvalAEP" placeholder="Telefono" name="telefonoAvalAEP" required>
 		</div>
 
 
 		<div class="form-group">
-			<label for="corr">Correo:</label>
+			<label for="corr">Correo del aval:</label>
 			<input type="email" class="form-control" id="correoAEPAval" placeholder="Correo" name="correoAEPAval" required>
 		</div>
 

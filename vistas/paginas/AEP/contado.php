@@ -13,21 +13,27 @@ $plantilla -> ctrTraerPlantilla();
 	<h2>Ingresa Datos</h2>
 	<form action="/action_page.php">
 		<div class="form-group">
-			<label for="nc">Numero Catasatral</label>
+			<label for="nc">Número Catastral:</label>
 			<input type="text" class="form-control" id="NC" placeholder="la clave catastral" name="NC" >
 		</div>
+
+		<div class="form-group">
+			<label for="corr">Tipo de operación:</label>
+			<input type="text" class="form-control" id="adquisiciónAEP" placeholder="Operación" name="correoAEP" required>
+		</div>
+
 		<div class="form-group">
 			<label for="nom">Nombre:</label>
 			<input type="text" class="form-control" id="nombreAEP" placeholder="Nombre" name="nombreAEP" required>
 		</div>
 
 		<div class="form-group">
-			<label for="dir">Direccion:</label>
+			<label for="dir">Dirección:</label>
 			<input type="text" class="form-control" id="direccionAEP" placeholder="Direccion" name="direccionAEP" required>
 		</div>
 
 		<div class="form-group">
-			<label for="tel">Telefono:</label>
+			<label for="tel">Teléfono:</label>
 			<input type="tel" class="form-control" id="telefonoAEP" placeholder="Telefono" name="telefonoAEP" required>
 		</div>
 
@@ -35,12 +41,6 @@ $plantilla -> ctrTraerPlantilla();
 			<label for="corr">Correo:</label>
 			<input type="email" class="form-control" id="correoAEP" placeholder="Correo" name="correoAEP" required>
 		</div>
-
-		<div class="form-group">
-			<label for="corr">Tipo de adquisición:</label>
-			<input type="text" class="form-control" id="adquisiciónAEP" placeholder="<?php ?>" name="correoAEP" required>
-		</div>
-
 
 		<div class="d-flex py-5 p-5">
 			<div class="form-group p-5">
