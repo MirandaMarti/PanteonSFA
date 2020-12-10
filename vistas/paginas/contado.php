@@ -18,8 +18,8 @@ $plantilla -> ctrTraerPlantilla();
 		</div>
 
 		<div class="form-group">
-			<label for="corr">Tipo de operación:</label>
-			<input type="text" class="form-control" id="adquisiciónAEP" placeholder="Operación" name="correoAEP" required>
+			<label for="corr">Tipo de adquisición:</label>
+			<input type="text" class="form-control" id="adquisiciónAEP" placeholder="Adquisición" name="correoAEP" required>
 		</div>
 
 		<div class="form-group">

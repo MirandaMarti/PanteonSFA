@@ -55,7 +55,7 @@ class ControladorFormularios{
 
 				}
 
-				window.location = "vistas/paginas/AEP/opcionpago.php";
+				window.location = "vistas/paginas/opcionpago.php";
 
 
 				</script>';

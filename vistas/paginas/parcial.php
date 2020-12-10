@@ -16,8 +16,8 @@ $plantilla -> ctrTraerPlantilla();
 		</div>
 
 		<div class="form-group">
-			<label for="nc">Tipo de operación:</label>
-			<input type="text" class="form-control" id="NC" placeholder="Operación" name="NC">
+			<label for="nc">Tipo de adquisición:</label>
+			<input type="text" class="form-control" id="NC" placeholder="Adquisición" name="NC">
 		</div>
 
 		<div class="form-group">

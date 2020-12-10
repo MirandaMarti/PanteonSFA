@@ -25,8 +25,11 @@ $plantilla -> ctrTraerPlantilla();
 
 
 	<div class="Botones px-5"> 
-	<a href="menu.php" class="btn btn-primary " role="button">Regresar</a>
+	
 
 	<a href="#" class="btn btn-primary" role="button">Buscar</a>
+
+
+	<a href="opcionpago.php" class="btn btn-primary " role="button">Regresar</a>
 
 	</div>
