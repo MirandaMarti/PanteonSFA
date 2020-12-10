@@ -23,7 +23,7 @@ $plantilla -> ctrTraerPlantilla();
 	</li>
 	<li class="nav item">
 
-		<a class="nav-link" href="../aep.php"> Regresar</a>
+		<a class="nav-link" href="../../paginas/salir.php"> Salir </a>
 
 	</li>
 </ul>

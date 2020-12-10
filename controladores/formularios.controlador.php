@@ -55,7 +55,7 @@ class ControladorFormularios{
 
 			}
 			
-			window.location = "vistas/paginas/menu.php";
+			window.location = "vistas/paginas/AEP/opcionpago.php";
 
 			</script>';
 
@@ -78,7 +78,7 @@ class ControladorFormularios{
 			}
 		
 
-			echo '<pre>'; print_r($respuesta); echo '</pre>';
+			//echo '<pre>'; print_r($respuesta); echo '</pre>';
 
 			//var_dump($respuesta);
 

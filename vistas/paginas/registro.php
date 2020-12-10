@@ -67,6 +67,7 @@ $plantilla -> ctrTraerPlantilla();
 
 		//instancia de un metodo estatico 
 		$registro = ControladorFormularios::ctrRegistro();
+		
 		if($registro == "ok"){
 
 			echo '<script>
