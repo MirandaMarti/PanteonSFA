@@ -1,5 +1,6 @@
 <?php 
 
+
 	require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
  ?>

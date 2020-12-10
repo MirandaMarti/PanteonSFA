@@ -48,16 +48,17 @@ class ControladorFormularios{
 			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
 				
 				echo '<script>
-			
-			if(window.history.replaceState){
-				
-				window.history.replaceState(null , null, window.location.href);
 
-			}
-			
-			window.location = "vistas/paginas/AEP/opcionpago.php";
+				if(window.history.replaceState){
 
-			</script>';
+					window.history.replaceState(null , null, window.location.href);
+
+				}
+
+				window.location = "vistas/paginas/AEP/opcionpago.php";
+
+
+				</script>';
 
 			}else{
 
@@ -78,7 +79,7 @@ class ControladorFormularios{
 			}
 		
 
-			//echo '<pre>'; print_r($respuesta); echo '</pre>';
+			//echo '<pre>'; print_r($respuesta); echo '</pre>'; 
 
 			//var_dump($respuesta);
 

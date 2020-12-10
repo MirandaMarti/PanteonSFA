@@ -6,6 +6,7 @@ $plantilla = new ControladorPlantilla();
 $plantilla -> ctrTraerPlantilla();
 
 
+
  ?>
 
 
@@ -23,7 +24,7 @@ $plantilla -> ctrTraerPlantilla();
 	</li>
 	<li class="nav item">
 
-		<a class="nav-link" href="../../paginas/salir.php"> Salir </a>
+		<a class="nav-link" href="../../../index.php"> Salir </a>
 
 	</li>
 </ul>
