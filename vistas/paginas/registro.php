@@ -15,7 +15,7 @@ $plantilla -> ctrTraerPlantilla();
 		
 		<div class="form-group">
 
-			<h1>registro</h1>
+			<h1>Registro</h1>
 
 			<br>
 			
@@ -86,7 +86,11 @@ $plantilla -> ctrTraerPlantilla();
 		?>
 
 		
-		<button type="submit" class="btn btn-primary">Enviar</button>
+		<button type="submit" class="btn btn-primary">Registrarse</button>
+
+		<br><br>
+
+		<a class="nav-link" href="../../index.php" class="btn btn-primary"> Ingresa </a>
 
 		
 
