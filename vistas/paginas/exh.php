@@ -38,7 +38,7 @@ $plantilla -> ctrTraerPlantilla();
 
 
 	<div class="py-5 px-5">
-		<a  href="MANT.html">Estastus del mantenimiento </a>
+		<a  href="mant.php">Estatus del mantenimiento </a>
 	
 </div>
 
