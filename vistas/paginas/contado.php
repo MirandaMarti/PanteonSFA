@@ -14,42 +14,42 @@ $plantilla -> ctrTraerPlantilla();
 	<form action="/action_page.php">
 		<div class="form-group">
 			<label for="nc">Número Catastral:</label>
-			<input type="text" class="form-control" id="NC" placeholder="la clave catastral" name="NC" >
+			<input type="text" class="form-control" id="NC" placeholder="Clave catastral" name="IngresoNumeroCts" required>
 		</div>
 
 		<div class="form-group">
 			<label for="corr">Tipo de adquisición:</label>
-			<input type="text" class="form-control" id="adquisiciónAEP" placeholder="Adquisición" name="correoAEP" required>
+			<input type="text" class="form-control" id="adquisición" placeholder="Adquisición" name="IngresoTipoAdq" required>
 		</div>
 
 		<div class="form-group">
-			<label for="nom">Nombre:</label>
-			<input type="text" class="form-control" id="nombreAEP" placeholder="Nombre" name="nombreAEP" required>
+			<label for="nom">Nombre del cliente:</label>
+			<input type="text" class="form-control" id="nombre" placeholder="Nombre" name="IngresoNombreCliente" required>
 		</div>
 
 		<div class="form-group">
-			<label for="dir">Dirección:</label>
-			<input type="text" class="form-control" id="direccionAEP" placeholder="Direccion" name="direccionAEP" required>
+			<label for="dir">Dirección del cliente:</label>
+			<input type="text" class="form-control" id="direccion" placeholder="Dirección" name="IngresoDireccionCliente" required>
 		</div>
 
 		<div class="form-group">
-			<label for="tel">Teléfono:</label>
-			<input type="tel" class="form-control" id="telefonoAEP" placeholder="Telefono" name="telefonoAEP" required>
+			<label for="tel">Teléfono del cliente:</label>
+			<input type="tel" class="form-control" id="telefono" placeholder="Teléfono" name="IngresoTelefonoCliente" required>
 		</div>
 
 		<div class="form-group">
-			<label for="corr">Correo:</label>
-			<input type="email" class="form-control" id="correoAEP" placeholder="Correo" name="correoAEP" required>
+			<label for="corr">Correo del cliente:</label>
+			<input type="email" class="form-control" id="correo" placeholder="Correo" name="IngresoCorreoCliente" required>
 		</div>
 
 		<div class="d-flex py-5 p-5">
 			<div class="form-group p-5">
-				<input type="checkbox" class="form-control" id="INEPRropietarioFosa3" name="INEPRropietarioFosa3" required>
+				<input type="checkbox" class="form-control" id="INECliente" name="INECliente" value="INE" required>
 				<label for="INE">Copia del INE</label>
 			</div>
 
 			<div class="form-group p-5">
-				<input type="checkbox" class="form-control" id="ComprobanteDomPropietarioFosa3" name="ComprobanteDomPropietarioFosa3" required>
+				<input type="checkbox" class="form-control" id="ComprobanteDomCliente" name="ComprobanteDomCliente" value="Comprobante" required>
 				<label for="ComprobanteDom">Copia del comprobante de dommicilio</label>
 			</div>
 
