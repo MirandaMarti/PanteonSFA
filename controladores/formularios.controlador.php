@@ -8,7 +8,7 @@ class ControladorFormularios{
 	Registro
 	=============================================*/
 	
-	static public function ctrRegistro(){
+	static public function ctrRegistroLogin(){
 
 		if(isset($_POST["registroNombre"])){
 
@@ -19,7 +19,7 @@ class ControladorFormularios{
 							"password" => $_POST["registroPassword"]);
 
 
-			$respuesta = ModeloFormularios::mdlRegistro($tabla, $datos);
+			$respuesta = ModeloFormularios::mdlRegistroLogin($tabla, $datos);
 
 			return $respuesta;
 

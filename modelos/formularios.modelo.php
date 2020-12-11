@@ -8,7 +8,7 @@ class ModeloFormularios{
 	Registro
 	=============================================*/
 
-	static public function mdlRegistro($tabla, $datos){
+	static public function mdlRegistroLogin($tabla, $datos){
 
 		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre, email, password) VALUES(:nombre, :email, :password)");
 

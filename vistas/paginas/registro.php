@@ -66,7 +66,7 @@ $plantilla -> ctrTraerPlantilla();
 		//$registro -> ctrRegistro(); instancia de un metodo no estatico 
 
 		//instancia de un metodo estatico 
-		$registro = ControladorFormularios::ctrRegistro();
+		$registro = ControladorFormularios::ctrRegistroLogin();
 		
 		if($registro == "ok"){
 
