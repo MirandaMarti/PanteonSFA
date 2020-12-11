@@ -55,6 +55,32 @@ $plantilla -> ctrTraerPlantilla();
 
 		</div>
 
+		<?php 
+
+		//$registro = new ControladorFormularios();
+		//$registro -> ctrRegistro(); instancia de un metodo no estatico 
+
+		//instancia de un metodo estatico 
+		$registro = ControladorFormularios::ctrRegistroClientes();
+		
+		if($registro == "ok"){
+
+			echo '<script>
+			
+			if(window.history.replaceState){
+				
+				window.history.replaceState(null , null, window.location.href);
+
+			}
+			
+
+			</script>';
+
+			echo '<div class="alert alert-success"> El cliente ha sido guardado </div>';
+		}
+
+		?>
+
 		<button type="submit" class="btn btn-primary p-3">Guardar</button>
 
 		<a href="opcionpago.php" class="btn btn-primary p-3" role="button">Regresar</a>

@@ -5,7 +5,7 @@ require_once "C:/xampp/htdocs/PanteonSFA/modelos/formularios.modelo.php";
 class ControladorFormularios{
 
 	/*=============================================
-	Registro
+	Registro login
 	=============================================*/
 	
 	static public function ctrRegistroLogin(){
@@ -87,6 +87,29 @@ class ControladorFormularios{
 
 		}
 
+
+	}
+
+	/*=============================================
+	Registro clientes
+	=============================================*/
+	
+	static public function ctrRegistroClientes(){
+
+		if(isset($_POST["IngresoNumeroCts"])){
+
+			$tabla = "administradores";
+
+			$datos = array("nombre" => $_POST["registroNombre"],
+							"email" => $_POST["registroEmail"],
+							"password" => $_POST["registroPassword"]);
+
+
+			$respuesta = ModeloFormularios::mdlRegistroLogin($tabla, $datos);
+
+			return $respuesta;
+
+		}
 
 	}
 	
