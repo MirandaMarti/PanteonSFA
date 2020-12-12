@@ -91,7 +91,7 @@ class ControladorFormularios{
 	}
 
 	/*=============================================
-	Registro clientes
+	Registro clientes contado
 	=============================================*/
 	
 	static public function ctrRegistroClientes(){

@@ -85,6 +85,13 @@ $plantilla -> ctrTraerPlantilla();
 			</div>
 		</div>
 
+
+		<?php 
+
+		//“CONTRATO DE COMPRA-VENTA DE CRIPTA PARCIALIDADES al guardar un cliente
+
+		 ?>
+
 		<button type="submit" class="btn btn-primary">Guardar</button>
 
 		<a href="opcionpago.php" class="btn btn-primary" role="button">Regresar</a>

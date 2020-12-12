@@ -81,6 +81,12 @@ $plantilla -> ctrTraerPlantilla();
 
 		?>
 
+		<?php 
+
+		//EL “CONTRATO DE COMPRA-VENTA DE CRIPTA CONTADO al guardar la información
+
+		 ?>
+
 		<button type="submit" class="btn btn-primary p-3">Guardar</button>
 
 		<a href="opcionpago.php" class="btn btn-primary p-3" role="button">Regresar</a>
