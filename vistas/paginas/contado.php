@@ -1,6 +1,7 @@
 <?php 
 
 require_once "C:/xampp/htdocs/PanteonSFA/controladores/plantilla.controlador.php";
+require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
 
 $plantilla = new ControladorPlantilla();
@@ -11,7 +12,8 @@ $plantilla -> ctrTraerPlantilla();
 
 <div class="container">
 	<h2>Ingresa Datos</h2>
-	<form action="/action_page.php">
+	<form method="post">
+
 		<div class="form-group">
 			<label for="nc">Número Catastral:</label>
 			<input type="text" class="form-control" id="NC" placeholder="Clave catastral" name="IngresoNumeroCts" required>
@@ -61,7 +63,7 @@ $plantilla -> ctrTraerPlantilla();
 		//$registro -> ctrRegistro(); instancia de un metodo no estatico 
 
 		//instancia de un metodo estatico 
-		$registro = ControladorFormularios::ctrRegistroClientes();
+		$registro = ControladorFormularios::ctrRegistroClientesContado();
 		
 		if($registro == "ok"){
 

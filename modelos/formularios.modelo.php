@@ -54,10 +54,34 @@ class ModeloFormularios{
 	}
 
 	/*=============================================
-	Registro login
+	Registro clientes contado
 	=============================================*/
 
 	static public function mdlRegistroClientesContado($tabla, $datos){
+
+		$stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(numerocat, tipoadq, nombrec, direccionc, telefonoc, correoc) VALUES 
+			(:numerocat, :tipoadq, :nombrec, :direccionc, :telefonoc, :correoc)");
+
+		$stmt -> bindParam(":numerocat", $datos["numerocat"], PDO::PARAM_STR);
+		$stmt -> bindParam(":tipoadq", $datos["tipoadq"], PDO::PARAM_STR);
+		$stmt -> bindParam(":nombrec", $datos["nombrec"], PDO::PARAM_STR);
+		$stmt -> bindParam(":direccionc", $datos["direccionc"], PDO::PARAM_STR);
+		$stmt -> bindParam(":telefonoc", $datos["telefonoc"], PDO::PARAM_STR);
+		$stmt -> bindParam(":correoc", $datos["correoc"], PDO::PARAM_STR);
+
+		if($stmt->execute()){
+
+			return "ok";
+
+		}else{
+
+			print_r(Conexion::conectar()->errorInfo());
+
+		}
+
+		$stmt -> close();
+
+		$stmt = null;
 
 	}
 
