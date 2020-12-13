@@ -46,6 +46,8 @@ class ControladorFormularios{
 
 			
 			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
+
+				
 				
 				echo '<script>
 
@@ -94,20 +96,11 @@ class ControladorFormularios{
 	Registro clientes contado
 	=============================================*/
 	
-	static public function ctrRegistroClientes(){
+	static public function ctrRegistroClientesContado(){
 
 		if(isset($_POST["IngresoNumeroCts"])){
 
-			$tabla = "administradores";
-
-			$datos = array("nombre" => $_POST["registroNombre"],
-							"email" => $_POST["registroEmail"],
-							"password" => $_POST["registroPassword"]);
-
-
-			$respuesta = ModeloFormularios::mdlRegistroLogin($tabla, $datos);
-
-			return $respuesta;
+			$tabla = 'clientescontado';
 
 		}
 

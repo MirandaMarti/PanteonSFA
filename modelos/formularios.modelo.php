@@ -5,7 +5,7 @@ require_once "conexion.php";
 class ModeloFormularios{
 
 	/*=============================================
-	Registro
+	Registro login
 	=============================================*/
 
 	static public function mdlRegistroLogin($tabla, $datos){
@@ -33,7 +33,7 @@ class ModeloFormularios{
 	}
 
 	/*=============================================
-	Seleccionar registros
+	Seleccionar registros login
 	=============================================*/
 
 	static public function mdlSeleccionarRegistros($tabla, $item, $valor){
@@ -50,6 +50,14 @@ class ModeloFormularios{
 			$stmt -> close();
 
 			$stmt = null;
+
+	}
+
+	/*=============================================
+	Registro login
+	=============================================*/
+
+	static public function mdlRegistroClientesContado($tabla, $datos){
 
 	}
 
