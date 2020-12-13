@@ -44,12 +44,12 @@ $plantilla -> ctrTraerPlantilla();
 
 		<div class="d-flex py-5 p-5">
 			<div class="form-group p-5">
-				<input type="checkbox" class="form-control" id="INECliente" name="INECliente" value="INE" required>
+				<input type="checkbox" class="form-control" id="INECliente" name="INECliente" required>
 				<label for="INE">Copia del INE</label>
 			</div>
 
 			<div class="form-group p-5">
-				<input type="checkbox" class="form-control" id="ComprobanteDomCliente" name="ComprobanteDomCliente" value="Comprobante" required>
+				<input type="checkbox" class="form-control" id="ComprobanteDomCliente" name="ComprobanteDomCliente" required>
 				<label for="ComprobanteDom">Copia del comprobante de dommicilio</label>
 			</div>
 
