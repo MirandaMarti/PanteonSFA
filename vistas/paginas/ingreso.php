@@ -3,6 +3,8 @@
 
 	require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
+	echo "<link rel=stylesheet href=Estilos/estilos.css>";
+
  ?>
 
 
