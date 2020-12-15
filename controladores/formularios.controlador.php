@@ -100,7 +100,7 @@ class ControladorFormularios{
 
 		if(isset($_POST["IngresoNumeroCts"])){
 
-			$tabla = 'clientescontado';
+			$tabla = "clientescontado";
 
 			$datos = array("numerocat" => $_POST["IngresoNumeroCts"],
 						   "tipoadq" => $_POST["IngresoTipoAdq"],
@@ -116,7 +116,35 @@ class ControladorFormularios{
 		}
 
 	}
+
+	/*=============================================
+	Registro clientes parcialidades
+	=============================================*/
 	
+	static function ctrRegistroClientesParcialidades(){
+
+		if (isset($_POST["IngresoNumeroCtsParcial"])) {
+
+			$tabla = "clientesparcialidades";
+
+			$datos = array("numerocat" => $_POST["IngresoNumeroCtsParcial"],
+						   "tipoadq" => $_POST["IngresoTipoAdqParcial"],
+						   "nombrec" => $_POST["IngresoNombreClienteParcial"],
+						   "direccionc" => $_POST["IngresoDireccionClienteParcial"],
+						   "telefonoc" => $_POST["IngresoTelefonoClienteParcial"],
+						   "correoc" => $_POST["IngresoCorreoClienteParcial"],
+						   "nombrea" => $_POST["IngresoNombreAval"],
+						   "direcciona" => $_POST["IngresoDireccionAval"],
+						   "telefonoa" => $_POST["IngresoTelefonoAval"],
+						   "correoa" => $_POST["IngresoCorreoAval"]);
+			
+			$respuesta = ModeloFormularios::mdlRegistroClientesParcialidades($tabla, $datos);
+
+			return $respuesta;
+
+		}
+
+	}
 
 }
 

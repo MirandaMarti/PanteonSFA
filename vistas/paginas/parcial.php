@@ -1,6 +1,7 @@
 <?php 
 
 require_once "C:/xampp/htdocs/PanteonSFA/controladores/plantilla.controlador.php";
+require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
 $plantilla = new ControladorPlantilla();
 $plantilla -> ctrTraerPlantilla();
@@ -9,7 +10,8 @@ $plantilla -> ctrTraerPlantilla();
 
 <div class="container">
 	<h2>Ingresa Datos</h2>
-	<form action="/action_page.php">
+	<form method="post">
+
 		<div class="form-group">
 			<label for="nc">Número catastral:</label>
 			<input type="text" class="form-control" id="NC" placeholder="Clave catastral" name="IngresoNumeroCtsParcial">
@@ -87,6 +89,24 @@ $plantilla -> ctrTraerPlantilla();
 
 
 		<?php 
+
+		$registro = ControladorFormularios::ctrRegistroClientesParcialidades();
+		
+		if($registro == "ok"){
+
+			echo '<script>
+			
+			if(window.history.replaceState){
+				
+				window.history.replaceState(null , null, window.location.href);
+
+			}
+			
+
+			</script>';
+
+			echo '<div class="alert alert-success"> El cliente ha sido guardado </div>';
+		}
 
 		//“CONTRATO DE COMPRA-VENTA DE CRIPTA PARCIALIDADES al guardar un cliente
 
