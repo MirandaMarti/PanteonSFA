@@ -3,10 +3,11 @@
 
 	require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
-	echo "<link rel=stylesheet href=Estilos/estilos.css>";
 
  ?>
 
+
+<link rel="stylesheet" href="estilos.css">
 
 <h3 class="text-center py-3"> Panteón san Fransisco de asis </h3>
 

@@ -14,9 +14,9 @@ class ControladorFormularios{
 
 			$tabla = "administradores";
 
-			$datos = array("nombre" => $_POST["registroNombre"],
-							"email" => $_POST["registroEmail"],
-							"password" => $_POST["registroPassword"]);
+			$datos = is_array("nombre" -> $_POST["registroNombre"],
+							"email" -> $_POST["registroEmail"],
+							"password" -> $_POST["registroPassword"]);
 
 
 			$respuesta = ModeloFormularios::mdlRegistroLogin($tabla, $datos);
@@ -45,7 +45,7 @@ class ControladorFormularios{
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
 			
-			if($respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
+			if(is_array($respuesta) && $respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
 
 
 				
