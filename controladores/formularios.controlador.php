@@ -146,6 +146,43 @@ class ControladorFormularios{
 
 	}
 
+	/*=============================================
+	Buscar clientes
+	=============================================*/
+
+	public function ctrBuscarClientes(){
+
+		if (isset($_POST["busquedaNomenclatura"])){
+
+			$tabla = "clientescontado";
+
+			//$tablaparcialidades = "clientesparcialidades";
+
+			$item = "numerocat";
+
+			$valor = $_POST["busquedaNomenclatura"];
+
+			$respuesta = ModeloFormularios::mdlSeleccionarClientes($tabla, $item, $valor);
+
+			//return $respuesta;
+
+			echo '<script>
+
+				if(window.history.replaceState){
+
+					window.history.replaceState(null , null, window.location.href);
+
+				}
+
+				</script>';
+
+			echo '<pre>'; print_r($respuesta); echo '</pre>';
+
+
+		}
+
+	}
+
 }
 
  ?>
