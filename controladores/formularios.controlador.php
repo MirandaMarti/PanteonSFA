@@ -12,6 +12,9 @@ class ControladorFormularios{
 
 		if(isset($_POST["registroNombre"])){
 
+			if(preg_match('//')){
+
+
 			$tabla = "administradores";
 
 			$datos = array("nombre" => $_POST["registroNombre"],
@@ -22,6 +25,14 @@ class ControladorFormularios{
 			$respuesta = ModeloFormularios::mdlRegistroLogin($tabla, $datos);
 
 			return $respuesta;
+
+			}else{
+
+				$respuesta = "error";
+
+				return $respuesta;
+
+			}
 
 		}
 
@@ -76,7 +87,7 @@ class ControladorFormularios{
 
 			</script>';
 
-			echo '<div class="alert alert-danger">Error al iniciar sesión</div>';
+			echo '<div class="alert alert-danger">Error al iniciar sesión, correo o contraseña incorretos</div>';
 
 			}
 		
@@ -290,4 +301,3 @@ class ControladorFormularios{
 
 }
 
- ?>
