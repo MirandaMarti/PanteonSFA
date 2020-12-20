@@ -122,25 +122,47 @@ class ModeloFormularios{
 
 
 	/*=============================================
-	Seleccionar clientes
+	Seleccionar clientes contado
 	=============================================*/
 
-	static public function mdlSeleccionarClientes($tabla, $item, $valor){
+	static public function mdlSeleccionarClientesContado($tablacontado, $item, $valor){
 
 
-			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tablacontado WHERE $item = :$item");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
 			$stmt -> execute();
 
-			return $stmt -> fetch();
+			return $stmt -> fetchAll();
 
 			$stmt -> close();
 
 			$stmt = null;
 
 	}	
+
+
+	/*=============================================
+	Seleccionar clientes parcialidades
+	=============================================*/
+
+	static public function mdlSeleccionarClientesParcialidades($tablaparcialidades, $item, $valor){
+
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tablaparcialidades WHERE $item = :$item");
+
+			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetchAll();
+
+			$stmt -> close();
+
+			$stmt = null;
+
+	}
 
 
 }

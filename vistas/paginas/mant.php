@@ -19,33 +19,37 @@ $plantilla -> ctrTraerPlantilla();
 
  			<label for="nc">Numero de nomenclatura:</label>
 
- 			<input type="text" class="form-control" id="Nomenclatura" placeholder="Ej: 18238ejfgh" name="busquedaNomenclatura">
-
- 		</div>
-
- 		<div class="form-group">
-
- 			<label for="nom">Nombre del propietario:</label>
-
- 			<input type="text" class="form-control" id="NombreDelPropietario" placeholder="Ej: Martin Barcenas Miranda" name="BusquedaPropietario" >
+ 			<input type="text" class="form-control" id="Nomenclatura" placeholder="Ej: 18238" name="busquedaNomenclatura">
 
  		</div>
 
  		<div class="Botones px-5"> 
 
- 			<?php 
-
- 			$ingreso = new ControladorFormularios();
-
- 			$ingreso -> ctrBuscarClientes();
-
- 			?>
+ 			
 
 
  			<button type="submit" class="btn btn-primary">Buscar</button>
 
 
  			<a href="opcionpago.php" class="btn btn-primary " role="button">Regresar</a>
+
+ 			<br><br><br><br>
+
+ 			<?php 
+
+ 			$clientecontado = ControladorFormularios::ctrBuscarClientesContado();
+
+ 			?>
+
+ 			<br><br>
+
+ 			<?php 
+ 			
+ 			$clienteparcial = ControladorFormularios::ctrBuscarClientesParcialidades(); 
+
+ 			?>
+
+ 			
 
  		</div>
 

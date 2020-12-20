@@ -147,22 +147,49 @@ class ControladorFormularios{
 	}
 
 	/*=============================================
-	Buscar clientes
+	Buscar clientes contado
 	=============================================*/
 
-	public function ctrBuscarClientes(){
+	static public function ctrBuscarClientesContado(){
 
 		if (isset($_POST["busquedaNomenclatura"])){
 
-			$tabla = "clientescontado";
-
-			//$tablaparcialidades = "clientesparcialidades";
+			$tablacontado = "clientescontado";
 
 			$item = "numerocat";
 
 			$valor = $_POST["busquedaNomenclatura"];
 
-			$respuesta = ModeloFormularios::mdlSeleccionarClientes($tabla, $item, $valor);
+			$respuesta = ModeloFormularios::mdlSeleccionarClientesContado($tablacontado, $item, $valor);
+
+			foreach ($respuesta as $key => $value) {
+
+
+				echo "Tipo de adquisición:  ";
+				echo $value["tipoadq"];
+				echo"<br>";
+				echo"<br>";
+				echo "Nombre del cliente:  ";
+				echo $value["nombrec"];
+				echo"<br>";
+				echo"<br>";
+				echo "Dirección del cliente:  ";
+				echo $value["direccionc"];
+				echo"<br>";
+				echo"<br>";
+				echo "Teléfono del cliente:  ";
+				echo $value["telefonoc"];
+				echo"<br>";
+				echo"<br>";
+				echo "Correo del cliente:  ";
+				echo $value["correoc"];
+				echo"<br>";
+				echo"<br>";
+				echo "El cliente se registró el día:  ";
+				echo $value["fecha"];
+				
+
+			}
 
 			//return $respuesta;
 
@@ -176,7 +203,85 @@ class ControladorFormularios{
 
 				</script>';
 
-			echo '<pre>'; print_r($respuesta); echo '</pre>';
+			//echo '<pre>'; print_r($respuesta); echo '</pre>';
+
+
+		}
+
+	}
+
+	/*=============================================
+	Buscar clientes parcialidades
+	=============================================*/
+
+	static public function ctrBuscarClientesParcialidades(){
+
+		if (isset($_POST["busquedaNomenclatura"])){
+
+			$tablaparcialidades = "clientesparcialidades";
+
+			$item = "numerocat";
+
+			$valor = $_POST["busquedaNomenclatura"];
+
+			$respuesta = ModeloFormularios::mdlSeleccionarClientesParcialidades($tablaparcialidades, $item, $valor);
+
+			foreach ($respuesta as $key => $value) {
+				
+				echo "Tipo de adquisición:  ";
+				echo $value["tipoadq"];
+				echo"<br>";
+				echo"<br>";
+				echo "Nombre del cliente:  ";
+				echo $value["nombrec"];
+				echo"<br>";
+				echo"<br>";
+				echo "Dirección del cliente:  ";
+				echo $value["direccionc"];
+				echo"<br>";
+				echo"<br>";
+				echo "Teléfono del cliente:  ";
+				echo $value["telefonoc"];
+				echo"<br>";
+				echo"<br>";
+				echo "Correo del cliente:  ";
+				echo $value["correoc"];
+				echo"<br>";
+				echo"<br>";
+				echo "Nombre del aval:  ";
+				echo $value["nombrea"];
+				echo"<br>";
+				echo"<br>";
+				echo "Dirección del aval:  ";
+				echo $value["direcciona"];
+				echo"<br>";
+				echo"<br>";
+				echo "Teléfono del aval:  ";
+				echo $value["telefonoa"];
+				echo"<br>";
+				echo"<br>";
+				echo "Correo del aval:  ";
+				echo $value["correoa"];
+				echo"<br>";
+				echo"<br>";
+				echo "El cliente se registró el día:  ";
+				echo $value["fecha"];
+
+			}
+
+			//return $respuesta;
+
+			echo '<script>
+
+				if(window.history.replaceState){
+
+					window.history.replaceState(null , null, window.location.href);
+
+				}
+
+				</script>';
+
+			//echo '<pre>'; print_r($respuesta); echo '</pre>';
 
 
 		}
