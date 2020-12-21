@@ -154,6 +154,18 @@ class ControladorFormularios{
 
 		if (isset($_POST["IngresoNumeroCtsParcial"])) {
 
+			if(preg_match('/^[0-9]+$/', $_POST["IngresoNumeroCtsParcial"]) && 
+			   preg_match('/^[0-9a-zA-Z ]+$/', $_POST["IngresoTipoAdqParcial"]) &&
+			   preg_match('/^[a-zA-ZáéíúóÁÉÍÓÚñÑ ]+$/', $_POST["IngresoNombreClienteParcial"]) &&
+			   preg_match('/^[#,.A-Za-z0-9 ]{5,50}+$/', $_POST["IngresoDireccionClienteParcial"]) &&
+			   preg_match('/^[0-9]+$/', $_POST["IngresoTelefonoClienteParcial"]) &&
+			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["IngresoCorreoClienteParcial"]) &&
+			   preg_match('/^[a-zA-ZáéíúóÁÉÍÓÚñÑ ]+$/', $_POST["IngresoNombreAval"]) &&
+			   preg_match('/^[#,.A-Za-z0-9 ]{5,50}+$/', $_POST["IngresoDireccionAval"]) &&
+			   preg_match('/^[0-9]+$/', $_POST["IngresoTelefonoAval"]) &&
+			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["IngresoCorreoAval"])){
+
+
 			$tabla = "clientesparcialidades";
 
 			$datos = array("numerocat" => $_POST["IngresoNumeroCtsParcial"],
@@ -170,6 +182,14 @@ class ControladorFormularios{
 			$respuesta = ModeloFormularios::mdlRegistroClientesParcialidades($tabla, $datos);
 
 			return $respuesta;
+
+			}else{
+
+				$respuesta = "error";
+
+				return $respuesta;
+
+			}
 
 		}
 

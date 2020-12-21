@@ -108,6 +108,23 @@ $plantilla -> ctrTraerPlantilla();
 			echo '<div class="alert alert-success"> El cliente ha sido guardado </div>';
 		}
 
+		if($registro == "error"){
+
+			echo '<script>
+			
+			if(window.history.replaceState){
+				
+				window.history.replaceState(null , null, window.location.href);
+
+			}
+			
+
+			</script>';
+
+			echo '<div class="alert alert-danger">No se permiten caracteres especiales </div>';
+
+		}
+
 		//“CONTRATO DE COMPRA-VENTA DE CRIPTA PARCIALIDADES al guardar un cliente
 
 		 ?>
