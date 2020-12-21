@@ -12,7 +12,9 @@ class ControladorFormularios{
 
 		if(isset($_POST["registroNombre"])){
 
-			if(preg_match('//')){
+			if(preg_match('/^[a-zA-ZáéíúóÁÉÍÓÚñÑ ]+$/', $_POST["registroNombre"]) && 
+			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["registroEmail"]) &&
+			   preg_match('/^[0-9a-zA-Z]+$/', $_POST["registroPassword"])){
 
 
 			$tabla = "administradores";
@@ -111,6 +113,14 @@ class ControladorFormularios{
 
 		if(isset($_POST["IngresoNumeroCts"])){
 
+			if(preg_match('/^[0-9]+$/', $_POST["IngresoNumeroCts"]) && 
+			   preg_match('/^[0-9a-zA-Z ]+$/', $_POST["IngresoTipoAdq"]) &&
+			   preg_match('/^[a-zA-ZáéíúóÁÉÍÓÚñÑ ]+$/', $_POST["IngresoNombreCliente"]) &&
+			   preg_match('/^[#,.A-Za-z0-9 ]{5,50}+$/', $_POST["IngresoDireccionCliente"]) &&
+			   preg_match('/^[0-9]+$/', $_POST["IngresoTelefonoCliente"]) &&
+			   preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["IngresoCorreoCliente"])){
+
+
 			$tabla = "clientescontado";
 
 			$datos = array("numerocat" => $_POST["IngresoNumeroCts"],
@@ -123,6 +133,14 @@ class ControladorFormularios{
 			$respuesta = ModeloFormularios::mdlRegistroClientesContado($tabla, $datos);
 
 			return $respuesta;
+
+			}else{
+
+				$respuesta = "error";
+
+				return $respuesta;
+
+			}
 
 		}
 
