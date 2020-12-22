@@ -11,4 +11,3 @@ $plantilla -> ctrTraerPlantilla();
 
 include "vistas/paginas/ingreso.php";
 
- ?>
