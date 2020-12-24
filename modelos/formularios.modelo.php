@@ -39,9 +39,30 @@ class ModeloFormularios{
 	static public function mdlSeleccionarRegistros($tabla, $item, $valor){
 
 
-			$stmt = Conexion::conectar()->prepare("SELECT email, password FROM $tabla WHERE $item = :$item");
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $item = :$item");
 
 			$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetch();
+
+			$stmt -> close();
+
+			$stmt = null;
+
+	}
+
+	/*=============================================
+	Seleccionar registros intentos
+	=============================================*/
+
+	static public function mdlSeleccionarRegistrosIntentos($tabla){
+
+
+			$stmt = Conexion::conectar()->prepare("SELECT intentos_fallidos FROM $tabla");
+
+			//$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
 
 			$stmt -> execute();
 

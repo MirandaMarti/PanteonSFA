@@ -77,6 +77,18 @@ class ControladorFormularios{
 
 			}else{
 
+				$tabla = "administradores";
+	
+				$respuesta = ModeloFormularios::mdlSeleccionarRegistrosIntentos($tabla);
+
+			//$intentos_fallidos = is_int($respuesta) && is_int($respuesta["intentos_fallidos"]+1);
+
+			//var_dump($intentos_fallidos);
+
+				$intentos_fallidos = $respuesta["intentos_fallidos"]+1;
+
+				print_r($intentos_fallidos);
+
 
 			echo '<script>
 			
