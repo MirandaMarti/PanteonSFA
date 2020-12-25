@@ -96,9 +96,6 @@ class ControladorFormularios{
 
 				$actualizarIntentoFallidos = ModeloFormularios::mdlActualizarIntentosFallidos($tabla, $intentos, $item, $valor);
 
-				
-
-
 
 				}else{
 
