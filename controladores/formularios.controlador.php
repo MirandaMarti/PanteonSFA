@@ -109,10 +109,7 @@ class ControladorFormularios{
 
 
 				</script>';
-
-					echo '<div class="alert alert-warning">Excediste el número máximo de intentos</div>';
-
-					
+	
 
 				}
 
