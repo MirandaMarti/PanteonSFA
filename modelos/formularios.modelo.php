@@ -54,27 +54,6 @@ class ModeloFormularios{
 	}
 
 	/*=============================================
-	Seleccionar registros intentos
-	=============================================*/
-
-	static public function mdlSeleccionarRegistrosIntentos($tabla){
-
-
-			$stmt = Conexion::conectar()->prepare("SELECT intentos_fallidos FROM $tabla");
-
-			//$stmt -> bindParam(":".$item, $valor, PDO::PARAM_STR);
-
-			$stmt -> execute();
-
-			return $stmt -> fetch();
-
-			$stmt -> close();
-
-			$stmt = null;
-
-	}
-
-	/*=============================================
 	Registro clientes contado
 	=============================================*/
 
@@ -182,6 +161,55 @@ class ModeloFormularios{
 			$stmt -> close();
 
 			$stmt = null;
+
+	}
+
+	/*=============================================
+	Seleccionar registros intentos
+	=============================================*/
+
+	static public function mdlSeleccionarRegistrosIntentos($tabla, $correo, $correoform){
+
+
+			$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE $correo = :$correo");
+
+			$stmt -> bindParam(":".$correo, $correoform, PDO::PARAM_STR);
+
+			$stmt -> execute();
+
+			return $stmt -> fetch();
+
+			$stmt -> close();
+
+			$stmt = null;
+
+	}
+
+	/*=============================================
+	Actualizar los intentos fallidos
+	=============================================*/
+
+	static public function mdlActualizarIntentosFallidos($tabla, $intentos, $item, $valor){
+
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET intentos_fallidos = :intentos_fallidos WHERE $item = :$item");
+
+		$stmt->bindParam(":intentos_fallidos", $intentos, PDO::PARAM_INT);
+		$stmt->bindParam(":".$item, $valor, PDO::PARAM_STR);
+
+		if($stmt->execute()){
+
+			return "ok";
+
+		}else{
+
+			print_r(Conexion::conectar()->errorInfo());
+
+		}
+
+		$stmt -> close();
+
+		$stmt = null;
+
 
 	}
 

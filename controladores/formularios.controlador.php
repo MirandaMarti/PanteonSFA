@@ -1,6 +1,7 @@
 <?php 
 
 require_once "C:/xampp/htdocs/PanteonSFA/modelos/formularios.modelo.php";
+//require_once "C:/xampp/htdocs/PanteonSFA/vistas/paginas/ingreso.php";
 
 class ControladorFormularios{
 
@@ -60,7 +61,7 @@ class ControladorFormularios{
 			
 			if(is_array($respuesta) && $respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
 
-
+				$actualizarIntentoFallidos = ModeloFormularios::mdlActualizarIntentosFallidos($tabla, 0, $item, $valor);
 				
 				echo '<script>
 
@@ -77,17 +78,47 @@ class ControladorFormularios{
 
 			}else{
 
+				if($respuesta["intentos_fallidos"] < 3 ){
+
 				$tabla = "administradores";
-	
-				$respuesta = ModeloFormularios::mdlSeleccionarRegistrosIntentos($tabla);
 
-			//$intentos_fallidos = is_int($respuesta) && is_int($respuesta["intentos_fallidos"]+1);
+				$correo = "email";
 
-			//var_dump($intentos_fallidos);
+				$correoform = $_POST["ingresoEmail"];
 
-				$intentos_fallidos = $respuesta["intentos_fallidos"]+1;
+				$respuesta = ModeloFormularios::mdlSeleccionarRegistrosIntentos($tabla, $correo, $correoform); 
 
-				print_r($intentos_fallidos);
+				$intentos = $respuesta["intentos_fallidos"]+1;
+
+				$item = "email";
+
+				$valor = $_POST["ingresoEmail"];
+
+				$actualizarIntentoFallidos = ModeloFormularios::mdlActualizarIntentosFallidos($tabla, $intentos, $item, $valor);
+
+				
+
+
+
+				}else{
+
+				echo '<script>
+
+
+				window.location = "vistas/paginas/reestablecer.php";
+
+
+				</script>';
+
+					echo '<div class="alert alert-warning">Excediste el número máximo de intentos</div>';
+
+					
+
+				}
+
+				
+
+				//print_r($intentos);
 
 
 			echo '<script>
