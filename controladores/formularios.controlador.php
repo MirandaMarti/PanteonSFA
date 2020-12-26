@@ -20,9 +20,13 @@ class ControladorFormularios{
 
 			$tabla = "administradores";
 
+			$encriptarPassword = crypt($_POST["registroPassword"], '$2a$07$SisCementerioSanFcoDeAsis$');
+
 			$datos = array("nombre" => $_POST["registroNombre"],
 							"email" => $_POST["registroEmail"],
-							"password" => $_POST["registroPassword"]);
+							"password" => $encriptarPassword);
+
+			//var_dump($encriptarPassword);
 
 
 			$respuesta = ModeloFormularios::mdlRegistroLogin($tabla, $datos);
@@ -58,8 +62,10 @@ class ControladorFormularios{
 
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
+			$desencriptarPassword = crypt($_POST["ingresoPassword"], '$2a$07$SisCementerioSanFcoDeAsis$');
+
 			
-			if(is_array($respuesta) && $respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $_POST["ingresoPassword"] && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
+			if(is_array($respuesta) && $respuesta["email"] == $_POST["ingresoEmail"] && $respuesta["password"] == $desencriptarPassword && $_POST["ingresoEmail"] != null && $_POST["ingresoPassword"] != null){
 
 				$actualizarIntentoFallidos = ModeloFormularios::mdlActualizarIntentosFallidos($tabla, 0, $item, $valor);
 				
