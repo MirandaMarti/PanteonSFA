@@ -7,8 +7,6 @@
  ?>
 
 
-<link rel="stylesheet" href="estilos.css">
-
 <h3 class="text-center py-3"> Panteón san Fransisco de asis </h3>
 
 <div class="d-flex justify-content-center text-center">
@@ -28,7 +26,7 @@
 				<div class="input-group-prepend">
 					<span class="input-group-text"><i class="fas fa-envelope"></i></span>
 				</div>
-					<input type="email" class="form-control" id="email" name="ingresoEmail">
+					<input type="email" class="form-control" id="emailIngreso" name="ingresoEmail">
 			</div>
 
 			
@@ -67,4 +65,5 @@
 
 
 	</form>
+
 </div>

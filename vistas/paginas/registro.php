@@ -1,5 +1,7 @@
 <?php 
 
+//require_once "C:/xampp/htdocs/PanteonSFA/ajax/formularios.ajax.php";
+
 require_once "C:/xampp/htdocs/PanteonSFA/controladores/plantilla.controlador.php";
 require_once "C:/xampp/htdocs/PanteonSFA/controladores/formularios.controlador.php";
 
@@ -53,7 +55,7 @@ $plantilla -> ctrTraerPlantilla();
 				<div class="input-group-prepend">
 					<span class="input-group-text"><i class="fas fa-lock"></i></span>
 				</div>
-					<input type="password" class="form-control" id="pwd" name="registroPassword">
+					<input type="password" class="form-control" id="pwdR" name="registroPassword">
 			</div>
 
 			
@@ -103,6 +105,14 @@ $plantilla -> ctrTraerPlantilla();
 
 		?>
 
+		<?php 
+ 		
+ 		//$prueba = AjaxFormularios::ajaxValidarEmail();
+
+ 		//var_dump($prueba);
+
+		 ?>
+
 		
 		<button type="submit" class="btn btn-primary">Registrarse</button>
 
@@ -114,4 +124,7 @@ $plantilla -> ctrTraerPlantilla();
 
 
 	</form>
+
+		<script src="../js/norepeat.js"></script>
+
 </div>

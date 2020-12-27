@@ -62,6 +62,7 @@ class ControladorFormularios{
 
 			$respuesta = ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
 
+
 			$desencriptarPassword = crypt($_POST["ingresoPassword"], '$2a$07$SisCementerioSanFcoDeAsis$');
 
 			
@@ -144,6 +145,22 @@ class ControladorFormularios{
 			
 
 		}
+
+
+	}
+
+	/*=============================================
+	Seleccionar registros
+	=============================================*/
+	
+	static public function ctrSeleccionarRegistros($item, $valor){
+
+		$tabla = "administradores";
+
+		$respuesta 	= ModeloFormularios::mdlSeleccionarRegistros($tabla, $item, $valor);
+
+		return $respuesta;
+
 
 
 	}
