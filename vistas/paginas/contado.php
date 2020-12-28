@@ -22,6 +22,13 @@ $plantilla -> ctrTraerPlantilla();
 		<div class="form-group">
 			<label for="corr">Tipo de adquisición:</label>
 			<input type="text" class="form-control" id="adquisición" placeholder="Adquisición" name="IngresoTipoAdq" required>
+
+			<?php 
+
+			//Cripta tipo 3, Nicho, Fosa tipo A1 y A2, Fosa tipo A3
+
+			 ?>
+			
 		</div>
 
 		<div class="form-group">
