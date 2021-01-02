@@ -117,7 +117,7 @@ $plantilla -> ctrTraerPlantilla();
 
 		<a href="opcionpago.php" class="btn btn-primary p-3" role="button">Regresar</a>
 
-		<a class="btn btn-danger p-3" href="#">Generar PDF</a>
+		<a class="btn btn-danger p-3" href="../../pdf/contratocompraventacontado.php">Generar PDF</a>
 
 		<br><br><br><br>
 
