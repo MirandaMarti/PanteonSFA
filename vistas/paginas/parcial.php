@@ -129,8 +129,13 @@ $plantilla -> ctrTraerPlantilla();
 
 		 ?>
 
-		<button type="submit" class="btn btn-primary">Guardar</button>
+		<button type="submit" class="btn btn-primary p-3">Guardar</button>
 
-		<a href="opcionpago.php" class="btn btn-primary" role="button">Regresar</a>
+		<a href="opcionpago.php" class="btn btn-primary p-3" role="button">Regresar</a>
+
+		<a class="btn btn-danger p-3" href="../../pdf/contratocompraventaparcialidades.php">Generar PDF</a>
+
+		<br><br><br><br>
+
 	</form>
 </div>

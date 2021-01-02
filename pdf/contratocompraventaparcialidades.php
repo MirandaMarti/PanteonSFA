@@ -1,6 +1,6 @@
 <?php
 //============================================================+
-// File name   : contratocompraventacontado.php
+// File name   : contratocompraventaparcialidades.php
 // Begin       : 2021-01-8
 // Last Update : 2013-01-15
 //
@@ -19,7 +19,7 @@
  * Creates an example PDF TEST document using TCPDF
  * @package com.tecnick.tcpdf
  * @abstract TCPDF - Example: Default Header and Footer
- * @author Martín Bárcenas Miranda
+ * @author Nicola Asuni
  * @since 2008-03-04
  */
 
@@ -32,7 +32,7 @@ $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8',
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('H. Ayuntamiento de Temixco');
-$pdf->SetTitle('Contrato compra-venta contado');
+$pdf->SetTitle('Contrato compra-venta parcialidades');
 $pdf->SetSubject('TCPDF');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
@@ -86,13 +86,13 @@ $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'colo
 $html = <<<EOD
 
 
-<p>CONTRATO DE COMPRAVENTA DIRECTA RESPECTO A LA ADQUISICIÓN DE UNA PERPETUIDAD DENTRO DEL PANTEON “SAN FRANCISCO DE ASIS”, UBICADO EN EL EJIDO Y POBLADO DE PUEBLO VIEJO, DEL MUNICIPIO DE TEMIXCO, MORELOS, QUE CELEBRAN POR UNA PARTE, EL AYUNTAMIENTO CONSTITUCIONAL DE TEMIXCO, MORELOS; REPRESENTADO EN ESTE ACTO POR SU PRESIDENTA MUNICIPAL CONSTITUCIONAL, LA LIC. EN E.S. JAZMIN JUANA SOLANO LOPEZ; A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO, SE LE DENOMINARÁ “EL AYUNTAMIENTO Y/O EL VENDEDOR” Y POR LA OTRA PARTE, “EL COMPRADOR”, A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO, SE DIRÁ “LAS PARTES”, MISMAS QUE SE SUJETAN AL TENOR DE LAS DECLARACIONES Y CLÁUSULAS SIGUIENTES:</p>
+<p>CONTRATO DE COMPRAVENTA CON RESERVA DE DOMINIO, RESPECTO A LA ADQUISICIÓN DE UNA PERPETUIDAD, DENTRO DEL PANTEON “SAN FRANCISCO DE ASIS”, UBICADO EN EL EJIDO Y POBLADO DE PUEBLO VIEJO, DEL MUNICIPIO DE TEMIXCO, MORELOS, QUE CELEBRAN POR UNA PARTE, EL AYUNTAMIENTO CONSTITUCIONAL DE TEMIXCO, MORELOS; REPRESENTADO EN ESTE ACTO POR SU PRESIDENTA MUNICIPAL CONSTITUCIONAL, LA LIC. EN E.S. JAZMIN JUANA SOLANO LOPEZ; A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO, SE LE DENOMINARÁ “EL AYUNTAMIENTO Y/O EL VENDEDOR” Y POR LA OTRA PARTE, “EL COMPRADOR”, A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO, SE DIRÁ “LAS PARTES”, MISMAS QUE SE SUJETAN AL TENOR DE LAS DECLARACIONES Y CLÁUSULAS SIGUIENTES:</p>
 
 <p style="text-align:center;">D E C L A R A C I O N E S</p>
 
 <p>I. DECLARA “EL AYUNTAMIENTO Y/O VENDEDOR”:</p>
 
-<p>I.1. El Ayuntamiento Constitucional de Temixco, Morelos, es una entidad investida de personalidad jurídica propia, base de la división territorial y de la organización política y administrativa del Estado de Morelos, en los términos de los artículos 115 de la Constitución Política de los Estados Unidos Mexicanos; artículos 112 y 113 de la Constitución Política del Estado de Morelos; así como los artículos 2, 5 y 38 de la Ley Orgánica Municipal del Estado de Morelos; y 1,2,5,19 y 20 del Bando de Policía y Buen Gobierno del Municipio de Temixco, Morelos. </p>
+<p>I.1. El Ayuntamiento Constitucional de Temixco, Morelos, es una entidad investida de personalidad jurídica propia, base de la división territorial y de la organización política y administrativa del Estado de Morelos, en los términos de los artículos 115 de la Constitución Política de los Estados Unidos Mexicanos; artículos 112 y 113 de la Constitución Política del Estado de Morelos; así como los artículos 2,5 y 38 de la Ley Orgánica Municipal del Estado de Morelos; y 1,2,5,19 y 20 del Bando de Policía y Buen Gobierno del Municipio de Temixco, Morelos.</p>
 
 <p>I.2.- La Lic. en E.S. Jazmín Juana Solano López, Presidenta Municipal de Temixco, se encuentra facultada para celebrar y firmar todos los acuerdos, convenios y actos jurídicos que fueran necesarios, de conformidad con lo establecido por los artículos 1, 2, 3, 4, 5, 38 fracción IX y 41 fracciones VII y IX de la Ley Orgánica Municipal del Estado de Morelos, así como en lo dispuesto por los artículos 5, 21, 22, 26, 34 del Reglamento de Gobierno y de la Administración Pública del Municipio de Temixco, Morelos; así como lo previsto en el artículo 20 y 23 del Bando de Policía y Buen Gobierno del Municipio de Temixco, Morelos y demás relativos y aplicables, y tiene facultades suficientes para celebrar todos aquellos actos, contratos e instrumentos jurídicos necesarios, para el buen desempeño de los negocios administrativos del municipio y la eficaz prestación de los servicios públicos municipales, durante el presente periodo de gestión.</p>
 
@@ -107,7 +107,7 @@ $html = <<<EOD
 
 <p>II.1. Que es una persona física, en pleno uso y goce de sus facultades físicas y mentales y con capacidad legal, de conformidad con la legislación mexicana.</p>
 
-<p>II.2. Que tiene la necesidad de adquirir, mediante la presente celebración del Contrato de Compraventa directa de una perpetuidad, dentro del Panteón “SAN FRANCISCO DE ASIS”, ubicado en el Ejido y Poblado de Pueblo Viejo del Municipio de Temixco, Morelos, y cumplir puntual y cabalmente, con toda la normatividad, así como los lineamientos internos que regulan la venta, organización funcionamiento, del panteón que le hace del conocimiento “EL AYUNTAMIENTO Y/O EL VENDEDOR”. </p>
+<p>II.2. Que tiene la necesidad de adquirir, mediante la presente celebración del Contrato de Compraventa con reserva de dominio, de una perpetuidad, dentro del Panteón “SAN FRANCISCO DE ASIS”, ubicado en el Ejido y Poblado de Pueblo Viejo del Municipio de Temixco, Morelos, y cumplir puntual y cabalmente, con toda la normatividad, así como los lineamientos internos que regulan la venta, organización funcionamiento, del panteón que le hace del conocimiento “EL AYUNTAMIENTO Y/O EL VENDEDOR”. </p>
 
 <p>II.3 Que señala como su domicilio legal, para los efectos de este contrato, lo es el ubicado en Temixco, Morelos.</p>
 
@@ -115,21 +115,22 @@ $html = <<<EOD
 
 <p>III.1. Que es su deseo, la celebración voluntaria del presente contrato y que ambas se reconocen la personalidad jurídica con la que se ostentan y reconocen que, en el presente contrato, no existe coacción alguna y que el mismo no es contrario a la ley, a la moral ni a las buenas costumbres.</p>
 
-<p>III.2. Que el presente Contrato de Compraventa Directa, se encuentra regulado por lo dispuesto en los artículos 1729, 1730, 1764, 1775, 1781 y demás relativos y aplicables del Código Civil vigente para el Estado de Morelos. </p>
+<p>III.2. Que el presente Contrato de Compraventa con Reserva de Dominio, se encuentra regulado por lo dispuesto en los artículos 1729, 1730, 1764, 1775, 1781 y demás relativos y aplicables del Código Civil vigente para el Estado de Morelos. </p>
 
 <p>En mérito de las declaraciones que anteceden, “LAS PARTES” sujetan el presente Contrato, a las siguientes:</p>
 
 <p style="text-align:center;">C L Á U S U L A S</p>
 
-<p>PRIMERA.- OBJETO DEL CONTRATO.- “LAS PARTES” suscriben el presente Contrato de Compraventa Directa, mediante el cual “EL VENDEDOR Y/O EL AYUNTAMIENTO” vende “AL COMPRADOR” y éste recibe la adquisición de una perpetuidad, dentro del Panteón “SAN FRANCISCO DE ASIS”, ubicado en la Calle Sin Nombre del Ejido de Pueblo Viejo y en particular en la Colonia Pueblo Viejo, del Municipio de Temixco, Morelos; con base a los Lineamientos y el Reglamento Interno del Panteón antes referido, mismo que le es entregado conforme a la organización interna que tiene el administrador del citado “AYUNTAMIENTO Y/O VENDEDOR”, bajo la organización del mismo.</p>
+<p>PRIMERA.- OBJETO DEL CONTRATO.- “LAS PARTES” suscriben el presente Contrato de Compraventa con Reserva de Dominio, mediante el cual “EL VENDEDOR Y/O EL AYUNTAMIENTO” vende “AL COMPRADOR” y éste recibe la adquisición de una cripta a perpetuidad tipo III, dentro del Panteón “SAN FRANCISCO DE ASIS”, ubicado en la Calle Sin Nombre del Ejido de Pueblo Viejo y en particular en la Colonia Pueblo Viejo, del Municipio de Temixco, Morelos; con base a los Lineamientos y el Reglamento Interno del Panteón antes referido, mismo que le es entregado conforme a la organización interna que tiene el administrador del citado “AYUNTAMIENTO Y/O VENDEDOR”, bajo la organización del mismo.</p>
 
-<p>SEGUNDA. - COSTO DE LA PERPETUIDAD. - “LAS PARTES” convienen que el precio de la perpetuidad, así como los demás conceptos o servicios que se proporcionan dentro del panteón “SAN FRANCISCO DE ASIS”, estará estipulado en la Ley de Ingresos Municipal, y también estará precisado en el presente Contrato, razón por la cual el precio que se fija por la cantidad de $32,473.13, misma cantidad que deberá de cubrirse por “EL COMPRADOR”. </p>
+<p>SEGUNDA.- COSTO DE LA PERPETUIDAD.- “LAS PARTES” convienen que el precio de la Cripta, así como los demás conceptos o servicios que se proporcionan dentro del panteón “SAN FRANCISCO DE ASIS”, estará estipulado en la Ley de Ingresos Municipal, y también estará precisada, en la tabla de costos que al efecto determine el “AYUNTAMIENTO Y /O VENDEDOR”, y que se dé a conocer con antelación a “EL COMPRADOR”, razón por la cual el precio que se fija a la cripta a perpetuidad tipo III es por la cantidad de $32,473.13 (treinta y dos mil cuatrocientos setenta y tres pesos 13/100 m.n.), misma cantidad que deberá de cubrirse por “EL COMPRADOR” de la siguiente manera:  </p>
 
-<p></p>
+<p>A)	“EL COMPRADOR” al momento de celebrar el Contrato de Compraventa con Reserva de Dominio respecto de la adquisición de una perpetuidad, dentro del panteón “San Francisco de Asís”, se compromete a pagar un enganche por la cantidad correspondiente al 30% (TREINTA POR CIENTO) del valor de la compra siendo la cantidad de $ 9,741.94 (nueve mil setecientos cuarenta y un pesos 94/100 m.n.).</p>
 
-<p>Siendo importante precisar, que la cantidad descrita en el párrafo en mención se encontrará vigente solo para el presente ejercicio fiscal 2020, toda vez que dichas cantidades, serán actualizadas una vez que se actualicen las Unidades de Medidas de Actualización, así como la Ley de Ingresos para el Municipio de Temixco, correspondiente.</p>
-
-<p>Así mismo, las partes acuerdan que no habrá ningún tipo de descuento, manifestación que de común acuerdo se hace, para todos los efectos legales a que haya lugar.</p>
+<p>B)	 “EL COMPRADOR” se compromete a pagar el 70% restante de la cantidad total de la compra, la cual se dividirá la cantidad correspondiente en seis pagos mensuales, por la cantidad de $ 22,731.19 (veintidós mil setecientos treinta y un pesos 19/100 m.n.).
+“LAS PARTES” acuerdan que una vez que se ha fijado el monto total de la compraventa, respecto de la celebración del contrato que han celebrado por cuerda separada, el remanente a que se refiere el inciso B del convenio que nos ocupa, se realizara bajo el siguiente calendario y monto de pagos.
+ 	Así mismo, las partes acuerdan que no habrá ningún tipo de descuento, por los conceptos descritos en la tabla de costos en mención, manifestación que de común acuerdo se hace, para todos los efectos legales a que haya lugar y para el caso de incumplimiento de pago de las dos primeras mensualidades (de dos mensualidades continuas), se aplicarán los recargos previstos en el artículo 128 Fracción II, apartado 1 de la Ley de Ingresos para el Ejercicio 2019, vigente a la celebración del presente convenio y para el caso del incumplimiento de pago de la tercera mensualidad en adelante (la subsecuente mensualidad), se procederá a la Rescisión del presente contrato sin responsabilidad alguna para “EL AYUNTAMIENTO Y/O VENDEDOR”.
+</p>
 
 <p>TERCERA. - FORMA DE PAGO. - “LAS PARTES” convienen que la forma de pago se realizará por parte de “EL COMPRADOR”, en efectivo que será depositada en las oficinas de ingresos del “EL AYUNTAMIENTO Y/O VENDEDOR”; con los siguientes datos bancarios:</p>
 
@@ -147,35 +148,47 @@ $html = <<<EOD
 
 <p>SEXTA .- DESIGNACION DE AVAL O RESPONSABLE SOLIDARIO.- “EL COMPRADOR” tiene el derecho de designar a una persona , bajo el carácter de AVAL O RESPONSABLE SOLIDARIO, que en caso de ausencia del “COMPRADOR”, tendrá el derecho  de ocupar la cripta que se adquiere; del mismo modo y solo para el caso de que “EL COMPRADOR”, con posterioridad a la celebración del presente contrato, por circunstancias extraordinarias, decida cambiar de Aval o Responsable Solidario, dicho cambio generará un costo, el cual deberá de ajustarse a lo establecido en la Ley de Ingresos vigente del “EL VENDEDOR Y/O EL AYUNTAMIENTO”. </p>
 
-<p></p>
-<p></p>
-
 <p>Lo mismo acontece, para el caso de que el Aval o Responsable Solidario, cuando ya no esté vivo “EL COMPRADOR”, decida por circunstancias extraordinarias, ocupar la titularidad del presente contrato, deberá de realizar previo el procedimiento y pago respectivo el cambio que se solicite, ajustándose a lo establecido en la Ley de Ingresos.</p>
 
 <p>Las partes acuerdan que, por cuanto al cambio de titular, dicho trámite deberá de sujetarse a lo dispuesto en la Ley de Ingresos.</p>
 
 <p>SEPTIMA. - MANTENIMIENTO DEL LOTE. - “LAS PARTES” convienen que “EL COMPRADOR”, pagará a la administración del panteón “SAN FRANCISCO DE ASIS”, la cantidad correspondiente a la limpieza y mantenimiento de manera anual o conforme a los periodos que se les requiera, y deberá de realizar este pago al inicio de cada año.</p>
 
-<p>OCTAVA. - 	OBLIGACIONES “DEL COMPRADOR”. Las partes acuerdan que le corresponden a “EL COMPRADOR”, el cumplimiento de las siguientes obligaciones:</p>
+<p>OCTAVA. - DIA DE PAGO. “LAS PARTES” acuerdan que para el caso del día de pago asignado por el responsable, sea un día inhábil, el pago correspondiente se recorrerá al día hábil siguiente sin interés ni pena alguna para “EL COMPRADOR”.</p>
+
+<p>NOVENA. - 	OBLIGACIONES “DEL COMPRADOR”. Las partes acuerdan que le corresponden a “EL COMPRADOR”, el cumplimiento de las siguientes obligaciones:</p>
 
 <p>
 -	La suscripción del presente contrato no exime ni libera a “EL COMPRADOR” de realizar los trámites que sean necesarios y cumplir con los requisitos que se le soliciten ante las oficinas de Servicios Públicos y en particular ante la Oficina de Panteones del “AYUNTAMIENTO y/o VENDEDOR”;<br><br>
--	A realizar todos los pagos, que con motivo del presente contrato se generen directamente en las oficinas de “EL VENDEDOR Y/O AYUNTAMIENTO”, en particular en la Secretaria de Servicios Públicos y/o Oficina de Panteones dependiente de ésta última y a no realizar pago alguno, a ninguna persona ajena a la dependencia ya mencionada;<br><br>
--	A notificar al Administrador del Panteón, cualquier daño o desperfecto que reciba en base a su espacio adquirido;<br><br>   
--	A cumplir con los Lineamientos que Regulan el Funcionamiento del Panteón Municipal “San Francisco de Asís de Temixco”, así como el Reglamento para la Prestación del Servicio Público de Panteones del Municipio de Temixco.<br><br>
--	Así mismo a instalar cruces, monumentos, mausoleos, construcciones, en las criptas ya que ésta deberá de ser adecuada las especificaciones que la administración del panteón le sugiera al momento del contrato;<br><br>
--	A realizar cualquier otra acción, situación o problema que genere y afecte el buen funcionamiento y organización del panteón, ya que de hacerlo será consignado a las autoridades correspondientes. 
+-	Realizar puntualmente todos los pagos estipulados en el presente contrato, tanto en la parte relativa al enganche de la CRIPTA, como las mensualidades fijadas en el mismo, en las oficinas de panteones de “EL VENDEDOR y/o AYUNTAMIENTO” so pena de dar por rescindido el presente contrato, sin responsabilidad alguna para este último;<br><br>
+
 </p>
 
-<p>NOVENA- LIBERACIÓN DE LA COMPRA. - “EL AYUNTAMIENTO Y/O VENDEDOR” manifiesta que una vez liquidado el total de la cantidad de la compra de la CRIPTA dentro del panteón “SAN FRANCISCO DE ASIS”, entregará el recibo oficial de pago, así como una copia certificada del contrato de compra venta directa.</p>
+<p></p>
+<p></p>
+
+<p>
+-	A realizar todos los pagos, que con motivo del presente contrato se generen directamente en las oficinas de “EL VENDEDOR Y/O AYUNTAMIENTO”, en particular en la Secretaria de Servicios Públicos y/o Oficina de Panteones dependiente de ésta última y las formas de pago señaladas en la Cláusula Tercera del presente contrato y a no realizar pago alguno, a ninguna persona ajena a la dependencia ya mencionada;<br><br>   
+-	A notificar al Administrador del Panteón, cualquier daño o desperfecto que reciba en base a su espacio adquirido;<br><br>
+-	A cumplir con los Lineamientos que Regulan el Funcionamiento del Panteón Municipal “San Francisco de Asís de Temixco”, así como el Reglamento para la Prestación del Servicio Público de Panteones del Municipio de Temixco.<br><br>
+-   Así mismo a instalar cruces, monumentos, mausoleos, construcciones, en las criptas ya que ésta deberá de ser adecuada las especificaciones que la administración del panteón le sugiera al momento del contrato;<br><br>
+-	A realizar cualquier otra acción, situación o problema que genere y afecte el buen funcionamiento y organización del panteón, ya que de hacerlo será consignado a las autoridades correspondientes.  
+</p>
+
+<p>DECIMA.- LIBERACIÓN DE LA COMPRA.- “EL AYUNTAMIENTO Y/O VENDEDOR” manifiesta que una vez liquidado el total de la cantidad de la compra de la CRIPTA dentro del panteón “SAN FRANCISCO DE ASIS”, entregará el comprobante correspondiente debidamente sellado por la administración del panteón.</p>
 
 <p></p>
 
-<p>DECIMA. - NORMATIVIDAD INTERNA DEL PANTEON. - “LAS PARTES” acuerdan que, para un correcto manejo, adecuado y organizado del panteón, implementó un reglamento interno, que a la firma del presente contrato se le ha dado a conocer, el cual se compromete a respetar y sujetarse a su estricto cumplimiento, bajo pena de que de no ajustarse se podrá dar por rescindido el presente contrato sin responsabilidad alguna para “EL AYUNTAMIENTO Y/O VENDEDOR”. </p>
+<p>DECIMA PRIMERA.- NORMATIVIDAD INTERNA DEL PANTEON.- “LAS PARTES” acuerdan que para un correcto manejo, adecuado y organizado del panteón, implementó un reglamento interno, que a la firma del presente contrato se le ha dado a conocer, el cual se compromete a respetar y sujetarse a su estricto cumplimiento, bajo pena de que de no ajustarse se podrá dar por rescindido el presente contrato sin responsabilidad alguna para “EL AYUNTAMIENTO Y/O VENDEDOR”. </p>
 
-<p>DECIMA PRIMERA.- CAUSALES DE RESCISION DEL CONTRATO.- “LAS PARTES” manifiestan que en caso de incumplimiento, tanto a las cláusulas del presente contrato o a las disposiciones establecidas en los Lineamientos de este Panteón, así como aquellas condicionantes o requisitos señalados por la autoridad municipal, se libera a “EL AYUNTAMIENTO Y/O VENDEDOR”, del cumplimiento del mismo, pudiendo éste disponer del lote de la manera que a éste mejor le convenga, sin necesidad de declaración judicial alguna, ni responsabilidad para éste último. </p>
+<p>DECIMA SEGUNDA.- CAUSALES DE RESCISION DEL CONTRATO.- “LAS PARTES” manifiestan que en caso de incumplimiento, tanto a las cláusulas del presente contrato o a las disposiciones establecidas en los Lineamientos de este Panteón, así como aquellas condicionantes o requisitos señalados por la autoridad municipal, o por la falta de pago de tres o más mensualidades, se libera a “EL AYUNTAMIENTO Y/O VENDEDOR”, del cumplimiento del mismo, pudiendo éste disponer del lote de la manera que a éste mejor le convenga, sin necesidad de declaración judicial alguna. </p>
 
-<p>DECIMA SEGUNDA. - JURISDICCION Y COMPETENCIA. - “LAS PARTES” acuerdan que cualquier controversia que surja con la interpretación del presente contrato, se someten expresamente a la jurisdicción y competencia de los Juzgados Civiles de Primera Instancia del Octavo Distrito Judicial con sede en el Municipio de Xochitepec, Morelos. </p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p>DECIMA TERCERA.- JURISDICCION Y COMPETENCIA.- “LAS PARTES” acuerdan que cualquier controversia que surja con la interpretación del presente contrato, se someten expresamente a la jurisdicción y competencia de los Juzgados Civiles de Primera Instancia del Octavo Distrito Judicial con sede en el Municipio de Xochitepec, Morelos. </p>
 
 <h4>ESTANDO “LAS PARTES” DEBIDAMENTE ENTERADAS DEL ALCANCE Y CONTENIDO DEL PRESENTE CONTRATO Y MANIFESTANDO QUE NO EXISTEN DOLO, LESION O CUALQUIER OTRO VICIO DE LA VOLUNTAD O DEL CONSENTIMIENTO QUE PUDIERAN INVALIDARLO, TODO O EN PARTE, LO RATIFICAN Y FIRMAN DE CONFORMIDAD POR QUINTUPLICADO, AL DÍA_________________________________________. ------------------</h4>
 
@@ -207,7 +220,17 @@ LIC. EN E.S. JAZMIN JUANA SOLANO LOPEZ.<br>
 <p></p>
 <p></p>
 
-<p style="font-size: xx-small";>LA PRESENTE HOJA DE FIRMAS CORRESPONDE AL CONTRATO DE COMPRAVENTA DIRECTA RESPECTO A LA ADQUISICIÓN DE UNA PERPETUIDAD, DENTRO DEL PANTEON “SAN FRANCISCO DE ASIS”, UBICADO EN EL EJIDO Y POBLADO DE PUEBLO VIEJO DEL MUNICIPIO DE TEMIXCO, MORELOS, QUE CELEBRAN POR UNA PARTE, EL AYUNTAMIENTO CONSTITUCIONAL DE TEMIXCO, MORELOS; REPRESENTADO EN ESTE ACTO POR SU PRESIDENTE MUNICIPAL CONSTITUCIONAL LA LIC. EN E.S. JAZMIN JUANA SOLANO LOPEZ; A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO SE LE DENOMINARÁ “EL AYUNTAMIENTO Y/O EL VENDEDOR” Y POR LA OTRA EL “EL COMPRADOR” A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO SE DIRÁ “LAS PARTES”.</p>
+<h4 style="text-align:center;">“EL AVAL O RESPONSABLE SOLIDARIO”</h4>
+
+<p></p>
+<p></p>
+
+<h4 style="text-align:center;">C.________________________</h4>
+
+<p></p>
+<p></p>
+
+<p style="font-size: xx-small";>LA PRESENTE HOJA DE FIRMAS CORRESPONDE AL CONTRATO DE COMPRAVENTA DIRECTA RESPECTO A LA ADQUISICIÓN DE UNA CRIPTA A PERPETUIDAD TIPO III, DENTRO DEL PANTEON “SAN FRANCISCO DE ASIS”, UBICADO EN EL EJIDO Y POBLADO DE PUEBLO VIEJO DEL MUNICIPIO DE TEMIXCO, MORELOS, QUE CELEBRAN POR UNA PARTE, EL AYUNTAMIENTO CONSTITUCIONAL DE TEMIXCO, MORELOS; REPRESENTADO EN ESTE ACTO POR SU PRESIDENTE MUNICIPAL CONSTITUCIONAL LA LIC. EN E.S. JAZMIN JUANA SOLANO LOPEZ; A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO SE LE DENOMINARÁ “EL AYUNTAMIENTO Y/O EL VENDEDOR” Y POR LA OTRA EL “EL COMPRADOR” A QUIEN EN LO SUCESIVO Y PARA LOS EFECTOS DEL PRESENTE CONTRATO SE DIRÁ “LAS PARTES”.</p>
 
 EOD;
 
@@ -219,7 +242,7 @@ $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 
 // Close and output PDF document
 // This method has several options, check the source code documentation for more information.
-$pdf->Output('contratocompraventacontado.pdf', 'I');
+$pdf->Output('contratocompraventaparcialidades.pdf', 'I');
 
 //============================================================+
 // END OF FILE
