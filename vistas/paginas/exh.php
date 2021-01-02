@@ -47,7 +47,7 @@ $plantilla -> ctrTraerPlantilla();
 
 	<div class="container">
 		<div>
-			<a href="#" class="btn btn-primary" role="button">Generar órden de pago</a>
+			<a href="../../pdf/ordenpagoexh.php" class="btn btn-primary" role="button">Generar órden de pago</a>
 			<a href="opcionpago.php" class="btn btn-primary" role="button">Regresar</a>
 		</div>
 	</div>
