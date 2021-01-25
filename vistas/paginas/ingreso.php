@@ -6,12 +6,19 @@
 
  ?>
 
+ <head>
+ 	
+ 	<link rel="stylesheet" href="../../assets/css/style.css">
 
-<h3 class="text-center py-3"> Panteón san Fransisco de asis </h3>
+ </head>
+
+
+
+<h3 class="text-center py-3 text-white"> Panteón san Fransisco de asis </h3>
 
 <div class="d-flex justify-content-center text-center">
 	
-	<form class="p-5 bg-light" method="post">
+	<form class="p-5 bg-light bg-thc" method="post">
 
 		<div class="form-group">
 
@@ -55,13 +62,13 @@
 		 ?>
 
 		
-
+		 <br>
 		
 		<button type="submit" class="btn btn-primary">Ingresar</button>
 
 		<br><br>
 
-		<a href="vistas/paginas/registro.php">Registrate</a>
+		<a class="text-white" href="vistas/paginas/registro.php">Registrate</a>
 
 
 	</form>
